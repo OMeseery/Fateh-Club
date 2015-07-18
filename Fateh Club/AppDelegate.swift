@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BTNavigationDropdownMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().translucent = false
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        if let root = self.window?.rootViewController as? UINavigationController {
+            self.setupMenu(["أخبار","ترتيب الفرق","مباريات"],inView: root)
+
+        
+        }
+        
         return true
     }
 
@@ -46,6 +53,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func setupMenu (items :[String!], inView: UINavigationController!) {
+        let menuView = BTNavigationDropdownMenu(frame:  CGRectMake(0.0, 0.0, 320, 44), title: items.first!, items: items, containerView: inView.view)
+        menuView.cellHeight = 50
+        menuView.cellBackgroundColor = inView.navigationBar.barTintColor
+        menuView.cellSelectionColor = UIColor(red: 0.0/255.0, green:160.0/255.0, blue:195.0/255.0, alpha: 1.0)
+        menuView.cellTextLabelColor = UIColor.whiteColor()
+        menuView.cellTextLabelFont = UIFont(name: "Avenir-Heavy", size: 17)
+        menuView.arrowPadding = 15
+        menuView.animationDuration = 0.3
+        menuView.maskBackgroundColor = UIColor.blackColor()
+        menuView.maskBackgroundOpacity = 0.3
+        menuView.bounceOffset = 5
+        menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+            switch (indexPath){
+            case 0 :
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NewsViewController") as! UIViewController
+                inView.pushViewController(controller, animated: true)
+            case 1:
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LeagueTableViewController") as! UIViewController
+                inView.pushViewController(controller, animated: true)
+            case 2:
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MatchesViewController") as! UIViewController
+                inView.pushViewController(controller, animated: true)
+            default:
+                println("Default")
+            }
+            
+        }
+        inView.navigationBar.addSubview(menuView)
+    }
+    
 
 }
 

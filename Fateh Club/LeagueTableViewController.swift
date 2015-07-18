@@ -20,8 +20,7 @@ class LeagueTableViewController: UIViewController {
         self.teamsTable.dataSource = self;
         self.teamsTable.delegate = self;
         
-        let headerview = NSBundle.mainBundle().loadNibNamed("LeagueTableHeader", owner: self, options: nil)[0]  as! UIView
-        self.teamsTable.tableHeaderView = headerview;
+       
       
          self.teamsTable.separatorStyle = UITableViewCellSeparatorStyle.None
         let nib = UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle())
@@ -35,6 +34,24 @@ class LeagueTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+  override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        if teamsTable.tableHeaderView != nil {
+            let header = NSBundle.mainBundle().loadNibNamed("LeagueTableHeader", owner: self, options: nil)[0]  as! UIView
+           
+            header.setNeedsUpdateConstraints()
+            header.updateConstraintsIfNeeded()
+            header.frame = CGRectMake(0, 0, CGRectGetWidth(teamsTable.bounds), CGFloat.max)
+            var newFrame = header.frame
+            header.setNeedsLayout()
+            header.layoutIfNeeded()
+            let newSize = header.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
+            newFrame.size.height = newSize.height
+            header.backgroundColor = UIColor.blueColor()
+            header.frame = newFrame
+            self.teamsTable.tableHeaderView = header
+        }
+    }
 
 }
 
@@ -65,14 +82,20 @@ extension LeagueTableViewController : UITableViewDataSource {
         cell._teamGoalsPro.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_pro") as! String )
         cell._teamGoalsagainst.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_against") as! String)
         cell._teamPoints.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("points") as! String )
-        
+        let imageURL = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("logo") as! String )
+        cell._teamLogo.imageFromUrl(imageURL)
     }
 
 }
 
 extension LeagueTableViewController : UITableViewDelegate {
-
-
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = NSBundle.mainBundle().loadNibNamed("LeagueTableHeader", owner: self, options: nil)[0]  as! UIView
+        return header;
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 40
+    }
 }
 
 extension LeagueTableViewController {

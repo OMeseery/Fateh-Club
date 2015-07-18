@@ -13,9 +13,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لعب" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebR-eU-Xpw">
                     <rect key="frame" x="182" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="Cga-ZR-pRK"/>
+                        <constraint firstAttribute="width" constant="21" id="Cga-ZR-pRK">
+                            <variation key="heightClass=regular-widthClass=compact" constant="19"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -32,9 +34,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ف" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRi-xx-siR">
                     <rect key="frame" x="153" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="GtS-9c-0vZ"/>
+                        <constraint firstAttribute="width" constant="21" id="GtS-9c-0vZ">
+                            <variation key="heightClass=regular-widthClass=compact" constant="11"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -51,9 +55,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ت" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgC-rj-T8V">
                     <rect key="frame" x="124" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="Zef-Es-iTm"/>
+                        <constraint firstAttribute="width" constant="21" id="Zef-Es-iTm">
+                            <variation key="heightClass=regular-widthClass=compact" constant="9"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -70,9 +76,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="خ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-Kk-I6Z">
                     <rect key="frame" x="95" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="H4C-wz-ewp"/>
+                        <constraint firstAttribute="width" constant="21" id="H4C-wz-ewp">
+                            <variation key="heightClass=regular-widthClass=compact" constant="9"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -89,9 +97,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="له" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urG-8v-eop">
                     <rect key="frame" x="66" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="rto-Xa-Rmh"/>
+                        <constraint firstAttribute="width" constant="21" id="rto-Xa-Rmh">
+                            <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -108,9 +118,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عليه" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-Ka-o5E">
                     <rect key="frame" x="37" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="21" id="PgM-PE-jjv"/>
+                        <constraint firstAttribute="width" constant="21" id="PgM-PE-jjv">
+                            <variation key="heightClass=regular-widthClass=compact" constant="19"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -127,9 +139,11 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="النقاط" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-ZD-rkQ">
                     <rect key="frame" x="8" y="13" width="21" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="59W-EK-6Mw"/>
+                        <constraint firstAttribute="width" constant="25" id="59W-EK-6Mw">
+                            <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -143,12 +157,14 @@
                         </mask>
                     </variation>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الموسم" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgN-mQ-Ahx">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الموسم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgN-mQ-Ahx">
                     <rect key="frame" x="211" y="13" width="46" height="14"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="x4P-qP-HZF"/>
+                        <constraint firstAttribute="width" constant="46" id="x4P-qP-HZF">
+                            <variation key="heightClass=regular-widthClass=compact" constant="58"/>
+                        </constraint>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
@@ -166,37 +182,53 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="dgC-rj-T8V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="9YU-T9-xcf">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
                 <constraint firstItem="urG-8v-eop" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="GHO-0n-yUy">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
-                <constraint firstItem="ebR-eU-Xpw" firstAttribute="leading" secondItem="VRi-xx-siR" secondAttribute="trailing" constant="8" id="ObZ-g6-4Fk"/>
+                <constraint firstItem="ebR-eU-Xpw" firstAttribute="leading" secondItem="VRi-xx-siR" secondAttribute="trailing" constant="8" id="ObZ-g6-4Fk">
+                    <variation key="heightClass=regular-widthClass=compact" constant="18"/>
+                </constraint>
                 <constraint firstItem="YFp-ZD-rkQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="WKX-tT-tju">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
                 <constraint firstItem="ebR-eU-Xpw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="XLr-Tg-NZ5">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
-                <constraint firstItem="VRi-xx-siR" firstAttribute="leading" secondItem="dgC-rj-T8V" secondAttribute="trailing" constant="8" id="YFc-du-8LL"/>
-                <constraint firstItem="dgC-rj-T8V" firstAttribute="leading" secondItem="VZa-Kk-I6Z" secondAttribute="trailing" constant="8" id="aR4-es-VFX"/>
+                <constraint firstItem="VRi-xx-siR" firstAttribute="leading" secondItem="dgC-rj-T8V" secondAttribute="trailing" constant="8" id="YFc-du-8LL">
+                    <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                </constraint>
+                <constraint firstItem="dgC-rj-T8V" firstAttribute="leading" secondItem="VZa-Kk-I6Z" secondAttribute="trailing" constant="8" id="aR4-es-VFX">
+                    <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="wgN-mQ-Ahx" secondAttribute="trailing" constant="33" id="bIe-4e-XLu"/>
-                <constraint firstItem="urG-8v-eop" firstAttribute="leading" secondItem="WyT-Ka-o5E" secondAttribute="trailing" constant="8" id="gol-wd-Tkp"/>
-                <constraint firstItem="WyT-Ka-o5E" firstAttribute="leading" secondItem="YFp-ZD-rkQ" secondAttribute="trailing" constant="9" id="gv8-2I-29i"/>
-                <constraint firstAttribute="trailing" secondItem="wgN-mQ-Ahx" secondAttribute="trailing" constant="33" id="h8e-PM-81y"/>
+                <constraint firstItem="urG-8v-eop" firstAttribute="leading" secondItem="WyT-Ka-o5E" secondAttribute="trailing" constant="8" id="gol-wd-Tkp">
+                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                </constraint>
+                <constraint firstItem="WyT-Ka-o5E" firstAttribute="leading" secondItem="YFp-ZD-rkQ" secondAttribute="trailing" constant="9" id="gv8-2I-29i">
+                    <variation key="heightClass=regular-widthClass=compact" constant="9"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="wgN-mQ-Ahx" secondAttribute="trailing" constant="33" id="h8e-PM-81y">
+                    <variation key="heightClass=regular-widthClass=compact" constant="18"/>
+                </constraint>
                 <constraint firstItem="wgN-mQ-Ahx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="hgH-sC-soO">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
                 <constraint firstItem="VRi-xx-siR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="lA7-Uu-vyj">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
                 <constraint firstItem="WyT-Ka-o5E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="mFv-Ci-3Su">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
-                <constraint firstItem="VZa-Kk-I6Z" firstAttribute="leading" secondItem="urG-8v-eop" secondAttribute="trailing" constant="8" id="mha-HD-zcr"/>
-                <constraint firstItem="wgN-mQ-Ahx" firstAttribute="leading" secondItem="ebR-eU-Xpw" secondAttribute="trailing" constant="33" id="roD-Ck-JXE"/>
+                <constraint firstItem="VZa-Kk-I6Z" firstAttribute="leading" secondItem="urG-8v-eop" secondAttribute="trailing" constant="8" id="mha-HD-zcr">
+                    <variation key="heightClass=regular-widthClass=compact" constant="21"/>
+                </constraint>
+                <constraint firstItem="wgN-mQ-Ahx" firstAttribute="leading" secondItem="ebR-eU-Xpw" secondAttribute="trailing" constant="33" id="roD-Ck-JXE">
+                    <variation key="heightClass=regular-widthClass=compact" constant="43"/>
+                </constraint>
                 <constraint firstItem="VZa-Kk-I6Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="vlm-b0-AsC">
-                    <variation key="heightClass=regular-widthClass=compact" constant="3"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="1"/>
                 </constraint>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

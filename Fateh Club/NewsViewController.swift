@@ -24,7 +24,7 @@ class NewsViewController: UIViewController {
         self.FCNewsTable.dataSource = self
         
  
-        self.setupMenu(["أخبار","ترتيب الفرق","مباريات"])
+//        self.setupMenu(["أخبار","ترتيب الفرق","مباريات"])
         self.loadNewsWithPage(self.currentPage)
         self.FCNewsTable.addInfiniteScrollingWithActionHandler { () -> Void in
             self.FCNewsTable.showsInfiniteScrolling = true
