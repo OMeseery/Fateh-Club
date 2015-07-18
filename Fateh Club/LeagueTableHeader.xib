@@ -183,6 +183,7 @@
                 <constraint firstAttribute="trailing" secondItem="wgN-mQ-Ahx" secondAttribute="trailing" constant="33" id="bIe-4e-XLu"/>
                 <constraint firstItem="urG-8v-eop" firstAttribute="leading" secondItem="WyT-Ka-o5E" secondAttribute="trailing" constant="8" id="gol-wd-Tkp"/>
                 <constraint firstItem="WyT-Ka-o5E" firstAttribute="leading" secondItem="YFp-ZD-rkQ" secondAttribute="trailing" constant="9" id="gv8-2I-29i"/>
+                <constraint firstAttribute="trailing" secondItem="wgN-mQ-Ahx" secondAttribute="trailing" constant="33" id="h8e-PM-81y"/>
                 <constraint firstItem="wgN-mQ-Ahx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="hgH-sC-soO">
                     <variation key="heightClass=regular-widthClass=compact" constant="3"/>
                 </constraint>
@@ -226,6 +227,7 @@
                     <exclude reference="ObZ-g6-4Fk"/>
                     <exclude reference="XLr-Tg-NZ5"/>
                     <exclude reference="bIe-4e-XLu"/>
+                    <exclude reference="h8e-PM-81y"/>
                     <exclude reference="hgH-sC-soO"/>
                     <exclude reference="roD-Ck-JXE"/>
                 </mask>
@@ -255,12 +257,13 @@
                     <include reference="lA7-Uu-vyj"/>
                     <include reference="ObZ-g6-4Fk"/>
                     <include reference="XLr-Tg-NZ5"/>
-                    <include reference="bIe-4e-XLu"/>
+                    <exclude reference="bIe-4e-XLu"/>
+                    <include reference="h8e-PM-81y"/>
                     <include reference="hgH-sC-soO"/>
                     <include reference="roD-Ck-JXE"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="300" y="-434"/>
+            <point key="canvasLocation" x="300" y="-1010"/>
         </view>
     </objects>
 </document>

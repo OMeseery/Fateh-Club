@@ -16,9 +16,17 @@ class LeagueTableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.teamsTable.registerNib(UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "cell")
+       
         self.teamsTable.dataSource = self;
         self.teamsTable.delegate = self;
+        
+        let headerview = NSBundle.mainBundle().loadNibNamed("LeagueTableHeader", owner: self, options: nil)[0]  as! UIView
+        self.teamsTable.tableHeaderView = headerview;
+      
+         self.teamsTable.separatorStyle = UITableViewCellSeparatorStyle.None
+        let nib = UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle())
+        self.teamsTable.registerNib(nib, forCellReuseIdentifier: "cell")
+        self.loadTable()
         // Do any additional setup after loading the view.
     }
 
@@ -48,32 +56,30 @@ extension LeagueTableViewController : UITableViewDataSource {
     }
     
     func configureCell(cell: LeagueTableCell, forRowAtIndexPath: NSIndexPath) {
-        cell._teamName.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("club_name") as! String
-        cell._teamRank.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("rank") as! String
-        cell._teamMatchesTotal.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_total") as! String
-        cell._teamMatchesWon.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_won") as! String
-        cell._teamMatchesDraw.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_draw") as! String
-        cell._teamMatchesLost.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_lost") as! String
-        cell._teamGoalsPro.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_pro") as! String
-        cell._teamGoalsagainst.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_against") as! String
-        cell._teamPoints.text = self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("points") as! String
+        cell._teamName.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("club_name") as! String)
+        cell._teamRank.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("rank") as! String)
+        cell._teamMatchesTotal.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_total") as! String)
+        cell._teamMatchesWon.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_won") as! String)
+        cell._teamMatchesDraw.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_draw") as! String)
+        cell._teamMatchesLost.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("matches_lost") as! String )
+        cell._teamGoalsPro.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_pro") as! String )
+        cell._teamGoalsagainst.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("goals_against") as! String)
+        cell._teamPoints.text = (self.teamsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("points") as! String )
         
     }
 
 }
 
 extension LeagueTableViewController : UITableViewDelegate {
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerview = UINib(nibName: "", bundle: NSBundle.mainBundle())
-    }
+
 
 }
 
 extension LeagueTableViewController {
-    func loadTableWithPage(page:Int){
+    func loadTable () {
         
-        let parameters = ["lang":"ar","page":String(page)]
-        Alamofire.request(.GET, KAPINews, parameters: parameters)
+        let parameters = ["lang":"ar"]
+        Alamofire.request(.GET, KAPITable, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
 
                 self.teamsArray=NSArray(array: (JSON?.objectForKey("table")) as! [AnyObject])

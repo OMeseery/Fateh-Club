@@ -55,7 +55,19 @@ class NewsViewController: UIViewController {
         
         self.navigationItem.titleView = menuView
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-        
+            switch (indexPath){
+            case 0 :
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NewsViewController") as! UIViewController
+                self.navigationController?.pushViewController(controller, animated: true)
+            case 1:
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LeagueTableViewController") as! UIViewController
+                self.navigationController?.pushViewController(controller, animated: true)
+            case 2:
+                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MatchesViewController") as! UIViewController
+                self.navigationController?.pushViewController(controller, animated: true)
+            default:
+                println("Default")
+            }
             
         }
     }

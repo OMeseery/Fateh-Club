@@ -84,7 +84,7 @@
                 <outlet property="_teamPoints" destination="5qG-5G-yJM" id="Dmu-gT-t6j"/>
                 <outlet property="_teamRank" destination="KYF-p5-nr1" id="7iR-Rr-MxV"/>
             </connections>
-            <point key="canvasLocation" x="254" y="307"/>
+            <point key="canvasLocation" x="137" y="143"/>
         </tableViewCell>
     </objects>
 </document>
