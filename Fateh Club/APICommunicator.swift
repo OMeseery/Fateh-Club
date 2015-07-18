@@ -9,6 +9,16 @@
 import Foundation
 import Alamofire
 class APICommunicator: NSObject {
+    
+    
+    class var sharedInstance :  APICommunicator {
+        struct Singleton {
+            static let instance = APICommunicator()
+        }
+        
+        return Singleton.instance
+    }
+
     func fetchNews (){
     
     

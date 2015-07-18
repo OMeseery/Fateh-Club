@@ -1,5 +1,5 @@
 //
-//  NewsTableCell.swift
+//  MatchTableCell.swift
 //  Fateh Club
 //
 //  Created by Mohamed EL Meseery on 7/18/15.
@@ -8,12 +8,8 @@
 
 import UIKit
 
-class NewsTableCell: UITableViewCell {
+class MatchTableCell: UITableViewCell {
 
-    @IBOutlet weak var FCNewsDate: UILabel!
-    @IBOutlet weak var FCNewsTitle: UILabel!
-    @IBOutlet weak var FCNewsImage: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

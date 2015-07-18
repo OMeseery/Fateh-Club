@@ -13,17 +13,26 @@ import BTNavigationDropdownMenu
 class ViewController: UIViewController {
 
     @IBOutlet weak var FCNewsTable: UITableView!
+    var postsArray : NSArray?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.FCNewsTable.delegate = self
+        self.FCNewsTable.dataSource = self
+        
         self.navigationController?.navigationBar.translucent = false
         UINavigationBar.appearance().translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         self.setupMenu(["أخبار","ترتيب الفرق","مباريات"])
         
-        Alamofire.request(.GET, KAPINews)
+        let parameters = ["lang":"ar","page":"1"]
+        
+        Alamofire.request(.GET, KAPINews, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
-                println((JSON?.objectForKey("posts") as! NSArray).count)
+                println(JSON)
+                self.postsArray = (JSON?.objectForKey("posts") as! NSArray)
+                self.FCNewsTable.reloadData()
         }
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -65,17 +74,17 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! NewsTableCell
         configureCell(cell, forRowAtIndexPath: indexPath)
         return cell
     }
     
-    func configureCell(cell: UITableViewCell, forRowAtIndexPath: NSIndexPath) {
-        
+    func configureCell(cell: NewsTableCell, forRowAtIndexPath: NSIndexPath) {
+        cell.FCNewsTitle.text = self.postsArray?.objectAtIndex(forRowAtIndexPath.row).objectForKey("title") as? String
     }
 }
 
