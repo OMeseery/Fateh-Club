@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="166" id="M7D-j3-h7U">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="166" id="M7D-j3-h7U" customClass="NewsTableCell" customModule="Fateh_Club" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M7D-j3-h7U" id="bJI-3b-PJw">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -37,7 +37,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="17" width="235" height="40"/>
+                                                        <rect key="frame" x="8" y="17" width="235" height="29"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq0-Km-6eu">
@@ -46,7 +46,7 @@
                                                     <color key="textColor" red="0.60777515172958374" green="0.60788232088088989" blue="0.60776835680007935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="8" y="72" width="235" height="21"/>
+                                                        <rect key="frame" x="8" y="54" width="235" height="21"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -65,6 +65,11 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="FCNewsDate" destination="Cq0-Km-6eu" id="k8b-jm-6E9"/>
+                                            <outlet property="FCNewsImage" destination="bJI-3b-PJw" id="qH8-CH-Uhb"/>
+                                            <outlet property="FCNewsTitle" destination="lIC-kW-IlZ" id="jyz-Vh-n7p"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -81,10 +86,10 @@
                                 <exclude reference="xMI-4b-bhV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ZX3-dV-TGS"/>
                                 <exclude reference="DAV-Pv-8jD"/>
                                 <exclude reference="OcM-87-qMJ"/>
                                 <exclude reference="TxT-5E-P0h"/>
-                                <exclude reference="ZX3-dV-TGS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -92,10 +97,10 @@
                                 <include reference="xMI-4b-bhV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ZX3-dV-TGS"/>
                                 <include reference="DAV-Pv-8jD"/>
                                 <include reference="OcM-87-qMJ"/>
                                 <include reference="TxT-5E-P0h"/>
-                                <include reference="ZX3-dV-TGS"/>
                             </mask>
                         </variation>
                     </view>
