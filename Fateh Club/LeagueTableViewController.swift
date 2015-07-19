@@ -23,8 +23,10 @@ class LeagueTableViewController: UIViewController {
         let nib = UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle())
         self.teamsTable.registerNib(nib, forCellReuseIdentifier: "cell")
         
-        let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
-        self.loadTable(lang)
+       
+        self.loadTable()
+        
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "languageChanged", name: KlanguageChangedNotification, object: nil)
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +35,10 @@ class LeagueTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func languageChanged (){
+        self.loadTable()
+        
+    }
 
 }
 
@@ -80,13 +86,14 @@ extension LeagueTableViewController : UITableViewDelegate {
 }
 
 extension LeagueTableViewController {
-    func loadTable (language:String) {
+    func loadTable () {
         SwiftSpinner.show("Loading Data ...")
-        let parameters = ["lang":language]
+         let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
+        let parameters = ["lang":lang]
         Alamofire.request(.GET, KAPITable, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
                 SwiftSpinner.hide(completion: { () -> Void in
-                    
+                    println("\(JSON)")
                     self.teamsArray=NSArray(array: (JSON?.objectForKey("table")) as! [AnyObject])
                     
                     self.teamsTable.reloadData()

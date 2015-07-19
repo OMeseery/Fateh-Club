@@ -9,6 +9,8 @@
 import UIKit
 import BTNavigationDropdownMenu
 
+let KlanguageChangedNotification = "LanguageChanged"
+
 class BaseViewController: UIViewController {
 
      var pageMenu : CAPSPageMenu?
@@ -74,7 +76,12 @@ class BaseViewController: UIViewController {
             default :
                 NSUserDefaults.standardUserDefaults().setObject("ar", forKey: "language")
             }
+            self.notifyLanguageChanged()
         }
+    }
+    
+    func notifyLanguageChanged() {
+        NSNotificationCenter.defaultCenter().postNotificationName(KlanguageChangedNotification, object: self)
     }
 }
 

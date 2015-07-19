@@ -28,14 +28,15 @@ class NewsViewController: UIViewController {
         self.FCNewsTable.delegate = self
         self.FCNewsTable.dataSource = self
         
-        let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
+        
 
-        self.loadNewsWithPage(self.currentPage, Language:lang)
+        self.loadNewsWithPage(self.currentPage)
         self.FCNewsTable.addInfiniteScrollingWithActionHandler { () -> Void in
             self.currentPage++
-            self.loadNewsWithPage(self.currentPage, Language:lang)
+            self.loadNewsWithPage(self.currentPage)
         }
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "languageChanged", name: KlanguageChangedNotification, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,7 +45,10 @@ class NewsViewController: UIViewController {
     }
     
     
-   
+    func languageChanged (){
+        self.loadNewsWithPage(1)
+    
+    }
     
 }
 extension NewsViewController : UITableViewDataSource {
@@ -87,8 +91,9 @@ extension NewsViewController : UITableViewDelegate {
 }
 
 extension NewsViewController {
-    func loadNewsWithPage(page:Int ,Language lang:String){
+    func loadNewsWithPage(page:Int){
      SwiftSpinner.show("Loading Data ...")
+        let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
         let parameters = ["lang":lang,"page":String(page)]
         Alamofire.request(.GET, KAPINews, parameters: parameters)
             .responseJSON { _, _, JSON, _ in

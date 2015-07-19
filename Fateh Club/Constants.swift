@@ -14,3 +14,5 @@ let KAPIBaseUrl = "http://fateh.innocastle.com/api/"
 let KAPINews    = KAPIBaseUrl + "get_posts/"
 let KAPITable   = KAPIBaseUrl + "table.php"
 let KAPIMatches = KAPIBaseUrl + "matches.php/"
+
+let KSeasonID = 9340

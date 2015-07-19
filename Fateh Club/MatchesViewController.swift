@@ -20,7 +20,10 @@ class MatchesViewController: UIViewController {
         self.matchesTable.dataSource = self;
         self.matchesTable.delegate = self;
         self.matchesTable.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.loadMatchesTableInSeaseon(9340)
+        self.loadMatchesTableInSeaseon(KSeasonID)
+        
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: "languageChanged", name: KlanguageChangedNotification, object: nil)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +32,10 @@ class MatchesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func languageChanged (){
+        self.loadMatchesTableInSeaseon(KSeasonID)
+        
+    }
 
 }
 
@@ -90,7 +97,8 @@ extension MatchesViewController : UITableViewDelegate {
 extension MatchesViewController {
     func loadMatchesTableInSeaseon(season:Int ) {
         SwiftSpinner.show("Loading Data ...")
-        let parameters = ["season":String(season),"filter":"club"]
+         let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
+        let parameters = ["lang":lang,"season":String(season),"filter":"club"]
         Alamofire.request(.GET, KAPIMatches, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
                 SwiftSpinner.hide(completion: { () -> Void in

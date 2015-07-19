@@ -506,11 +506,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed ELMeseery (36C5PY3HAP)";
 				INFOPLIST_FILE = "Fateh Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "feb6d6ff-92d7-457f-97f9-a6e20ad992f3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fateh Club/Fateh Club-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -522,11 +523,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed ELMeseery (36C5PY3HAP)";
 				INFOPLIST_FILE = "Fateh Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "feb6d6ff-92d7-457f-97f9-a6e20ad992f3";
 				SWIFT_OBJC_BRIDGING_HEADER = "Fateh Club/Fateh Club-Bridging-Header.h";
 			};
 			name = Release;
