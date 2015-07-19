@@ -19,6 +19,9 @@
 		A2DB8DDA1B5A210B001773E1 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */; };
 		A2DB8DDC1B5A2134001773E1 /* LeagueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DDB1B5A2134001773E1 /* LeagueTableViewController.swift */; };
 		A2DB8DDE1B5A2140001773E1 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */; };
+		A2E71C931B5B54A300591F86 /* CAPSPageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E71C921B5B54A300591F86 /* CAPSPageMenu.swift */; };
+		A2E71C951B5B566800591F86 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E71C941B5B566800591F86 /* BaseViewController.swift */; };
+		A2E71CAB1B5B642900591F86 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E71CAA1B5B642900591F86 /* SwiftSpinner.swift */; };
 		A2EC8A461B5A1A9B00ED23E3 /* NewsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EC8A451B5A1A9B00ED23E3 /* NewsTableCell.swift */; };
 		A2FB5E9E1B59615F0085424A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FB5E9D1B59615F0085424A /* AppDelegate.swift */; };
 		A2FB5EA31B59615F0085424A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2FB5EA11B59615F0085424A /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		A2DB8DDB1B5A2134001773E1 /* LeagueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueTableViewController.swift; sourceTree = "<group>"; };
 		A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		A2E71C921B5B54A300591F86 /* CAPSPageMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAPSPageMenu.swift; sourceTree = "<group>"; };
+		A2E71C941B5B566800591F86 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A2E71CAA1B5B642900591F86 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		A2EC8A451B5A1A9B00ED23E3 /* NewsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableCell.swift; sourceTree = "<group>"; };
 		A2FB5E981B59615F0085424A /* Fateh Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fateh Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2FB5E9C1B59615F0085424A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 		A2EC8A431B5A1A5E00ED23E3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A2E71CAA1B5B642900591F86 /* SwiftSpinner.swift */,
+				A2E71C921B5B54A300591F86 /* CAPSPageMenu.swift */,
 				A26E377A1B5AE195004D9A3D /* SVPullToRefresh */,
 				A21D44B41B596486003B642B /* Constants.swift */,
 				A2A31BD41B5ADEDA003EA947 /* Fateh Club-Bridging-Header.h */,
@@ -153,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				A2FB5E9D1B59615F0085424A /* AppDelegate.swift */,
+				A2E71C941B5B566800591F86 /* BaseViewController.swift */,
 				A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */,
 				A2A0FA891B5B3B2B00B357D7 /* PostViewController.swift */,
 				A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */,
@@ -355,8 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E71C951B5B566800591F86 /* BaseViewController.swift in Sources */,
 				A2DB8DDA1B5A210B001773E1 /* MatchesViewController.swift in Sources */,
 				A2FB5E9E1B59615F0085424A /* AppDelegate.swift in Sources */,
+				A2E71CAB1B5B642900591F86 /* SwiftSpinner.swift in Sources */,
+				A2E71C931B5B54A300591F86 /* CAPSPageMenu.swift in Sources */,
 				A2A0FA8A1B5B3B2B00B357D7 /* PostViewController.swift in Sources */,
 				A26E37801B5AE195004D9A3D /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A2EC8A461B5A1A9B00ED23E3 /* NewsTableCell.swift in Sources */,

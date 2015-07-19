@@ -22,7 +22,9 @@ class LeagueTableViewController: UIViewController {
         self.teamsTable.separatorStyle = UITableViewCellSeparatorStyle.None
         let nib = UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle())
         self.teamsTable.registerNib(nib, forCellReuseIdentifier: "cell")
-        self.loadTable()
+        
+        let lang =  NSUserDefaults.standardUserDefaults().objectForKey("language") as! String
+        self.loadTable(lang)
         // Do any additional setup after loading the view.
     }
 
@@ -78,15 +80,17 @@ extension LeagueTableViewController : UITableViewDelegate {
 }
 
 extension LeagueTableViewController {
-    func loadTable () {
-        
-        let parameters = ["lang":"ar"]
+    func loadTable (language:String) {
+        SwiftSpinner.show("Loading Data ...")
+        let parameters = ["lang":language]
         Alamofire.request(.GET, KAPITable, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
-
-                self.teamsArray=NSArray(array: (JSON?.objectForKey("table")) as! [AnyObject])
- 
-                self.teamsTable.reloadData()
+                SwiftSpinner.hide(completion: { () -> Void in
+                    
+                    self.teamsArray=NSArray(array: (JSON?.objectForKey("table")) as! [AnyObject])
+                    
+                    self.teamsTable.reloadData()
+                })
         }
     }
 

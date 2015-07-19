@@ -1,0 +1,13 @@
+PODS:
+  - Alamofire (1.2.3)
+  - BTNavigationDropdownMenu (0.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 1.2)
+  - BTNavigationDropdownMenu
+
+SPEC CHECKSUMS:
+  Alamofire: 5550bf0b575ed1a4bf9be572f9463e1015cc169e
+  BTNavigationDropdownMenu: 897d170f45fca707bb65efa7633ff661cb5a319f
+
+COCOAPODS: 0.37.2

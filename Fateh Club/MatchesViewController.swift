@@ -89,14 +89,16 @@ extension MatchesViewController : UITableViewDelegate {
 
 extension MatchesViewController {
     func loadMatchesTableInSeaseon(season:Int ) {
-        
-        let parameters = ["lang":"ar","season":String(season),"filter":"club"]
+        SwiftSpinner.show("Loading Data ...")
+        let parameters = ["season":String(season),"filter":"club"]
         Alamofire.request(.GET, KAPIMatches, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
-                
-                self.matchesArray=NSArray(array: (JSON?.objectForKey("matches")) as! [AnyObject])
-                
-                self.matchesTable.reloadData()
+                SwiftSpinner.hide(completion: { () -> Void in
+                    
+                    self.matchesArray=NSArray(array: (JSON?.objectForKey("matches")) as! [AnyObject])
+                    
+                    self.matchesTable.reloadData()
+                })
         }
     }
     
