@@ -9,27 +9,39 @@
 import UIKit
 import Alamofire
 import BTNavigationDropdownMenu
+import CAPSPageMenu
 
 class NewsViewController: UIViewController {
-
+    var pageMenu : CAPSPageMenu?
     
     @IBOutlet weak var FCNewsTable: UITableView!
+    
     var postsArray : NSMutableArray?
     var currentPage : Int = 1
-    
+    var currentLang : String = "ar"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var controllerArray : [UIViewController] = []
+        var parameters: [CAPSPageMenuOption] = [
+            .MenuItemSeparatorWidth(4.3),
+            .UseMenuLikeSegmentedControl(true),
+            .MenuItemSeparatorPercentageHeight(0.1)
+        ]
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
         
         self.FCNewsTable.delegate = self
         self.FCNewsTable.dataSource = self
         
  
 //        self.setupMenu(["أخبار","ترتيب الفرق","مباريات"])
-        self.loadNewsWithPage(self.currentPage)
+        self.setupMenu(["عربي","English"])
+
+        self.loadNewsWithPage(self.currentPage, Language:self.currentLang)
         self.FCNewsTable.addInfiniteScrollingWithActionHandler { () -> Void in
             self.FCNewsTable.showsInfiniteScrolling = true
             self.currentPage++
-            self.loadNewsWithPage(self.currentPage)
+            self.loadNewsWithPage(self.currentPage, Language:self.currentLang)
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -55,20 +67,28 @@ class NewsViewController: UIViewController {
         
         self.navigationItem.titleView = menuView
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
+//            switch (indexPath){
+//            case 0 :
+//                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NewsViewController") as! UIViewController
+//                self.navigationController?.pushViewController(controller, animated: true)
+//            case 1:
+//                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LeagueTableViewController") as! UIViewController
+//                self.navigationController?.pushViewController(controller, animated: true)
+//            case 2:
+//                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MatchesViewController") as! UIViewController
+//                self.navigationController?.pushViewController(controller, animated: true)
+//            default:
+//                println("Default")
+//            }
+      
             switch (indexPath){
             case 0 :
-                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("NewsViewController") as! UIViewController
-                self.navigationController?.pushViewController(controller, animated: true)
+                self.currentLang = "ar"
             case 1:
-                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LeagueTableViewController") as! UIViewController
-                self.navigationController?.pushViewController(controller, animated: true)
-            case 2:
-                let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MatchesViewController") as! UIViewController
-                self.navigationController?.pushViewController(controller, animated: true)
-            default:
-                println("Default")
+                self.currentLang = "en"
+            default :
+                self.currentLang = "ar"
             }
-            
         }
     }
     
@@ -100,14 +120,22 @@ extension NewsViewController : UITableViewDataSource {
 }
 
 extension NewsViewController : UITableViewDelegate {
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let controller : UIViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("PostViewController") as! UIViewController
+        (controller as! PostViewController).postTitle = self.postsArray?.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        (controller as! PostViewController).postDate = self.postsArray?.objectAtIndex(indexPath.row).objectForKey("date") as? String
+        (controller as! PostViewController).postDetails = self.postsArray?.objectAtIndex(indexPath.row).objectForKey("content") as? String
+        (controller as! PostViewController).postImage = (self.FCNewsTable.cellForRowAtIndexPath(indexPath) as! NewsTableCell ).FCNewsImage.image!
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
 }
 
 extension NewsViewController {
-    func loadNewsWithPage(page:Int){
+    func loadNewsWithPage(page:Int ,Language lang:String){
     
-        let parameters = ["lang":"ar","page":String(page)]
+        let parameters = ["lang":lang,"page":String(page)]
         Alamofire.request(.GET, KAPINews, parameters: parameters)
             .responseJSON { _, _, JSON, _ in
                 if self.postsArray?.count > 0 {

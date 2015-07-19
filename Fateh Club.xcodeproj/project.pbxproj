@@ -11,12 +11,11 @@
 		A21D44B51B596486003B642B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D44B41B596486003B642B /* Constants.swift */; };
 		A26E37801B5AE195004D9A3D /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = A26E377D1B5AE195004D9A3D /* UIScrollView+SVInfiniteScrolling.m */; };
 		A26E37811B5AE195004D9A3D /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A26E377F1B5AE195004D9A3D /* UIScrollView+SVPullToRefresh.m */; };
+		A2A0FA8A1B5B3B2B00B357D7 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0FA891B5B3B2B00B357D7 /* PostViewController.swift */; };
 		A2A31BCC1B5AB4E9003EA947 /* MatchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A31BCB1B5AB4E9003EA947 /* MatchTableCell.swift */; };
 		A2A31BCF1B5AB50E003EA947 /* LeagueTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A31BCD1B5AB50E003EA947 /* LeagueTableCell.swift */; };
 		A2A31BD01B5AB50E003EA947 /* LeagueTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A31BCE1B5AB50E003EA947 /* LeagueTableCell.xib */; };
 		A2A31BD21B5AD479003EA947 /* LeagueTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A31BD11B5AD479003EA947 /* LeagueTableHeader.xib */; };
-		A2A31BD61B5ADEDA003EA947 /* Objective-CBridgingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31BD51B5ADEDA003EA947 /* Objective-CBridgingHeader.m */; };
-		A2C953FC1B597229002FF0C1 /* APICommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C953FB1B597229002FF0C1 /* APICommunicator.swift */; };
 		A2DB8DDA1B5A210B001773E1 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */; };
 		A2DB8DDC1B5A2134001773E1 /* LeagueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DDB1B5A2134001773E1 /* LeagueTableViewController.swift */; };
 		A2DB8DDE1B5A2140001773E1 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */; };
@@ -47,13 +46,12 @@
 		A26E377D1B5AE195004D9A3D /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
 		A26E377E1B5AE195004D9A3D /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
 		A26E377F1B5AE195004D9A3D /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		A2A0FA891B5B3B2B00B357D7 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A2A31BCB1B5AB4E9003EA947 /* MatchTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableCell.swift; sourceTree = "<group>"; };
 		A2A31BCD1B5AB50E003EA947 /* LeagueTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueTableCell.swift; sourceTree = "<group>"; };
 		A2A31BCE1B5AB50E003EA947 /* LeagueTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeagueTableCell.xib; sourceTree = "<group>"; };
 		A2A31BD11B5AD479003EA947 /* LeagueTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeagueTableHeader.xib; sourceTree = "<group>"; };
 		A2A31BD41B5ADEDA003EA947 /* Fateh Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fateh Club-Bridging-Header.h"; sourceTree = "<group>"; };
-		A2A31BD51B5ADEDA003EA947 /* Objective-CBridgingHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Objective-CBridgingHeader.m"; sourceTree = "<group>"; };
-		A2C953FB1B597229002FF0C1 /* APICommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICommunicator.swift; sourceTree = "<group>"; };
 		A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		A2DB8DDB1B5A2134001773E1 /* LeagueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueTableViewController.swift; sourceTree = "<group>"; };
 		A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -109,16 +107,14 @@
 			path = SVPullToRefresh;
 			sourceTree = "<group>";
 		};
-		A2EC8A431B5A1A5E00ED23E3 /* Networking */ = {
+		A2EC8A431B5A1A5E00ED23E3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				A26E377A1B5AE195004D9A3D /* SVPullToRefresh */,
 				A21D44B41B596486003B642B /* Constants.swift */,
-				A2C953FB1B597229002FF0C1 /* APICommunicator.swift */,
-				A2A31BD51B5ADEDA003EA947 /* Objective-CBridgingHeader.m */,
 				A2A31BD41B5ADEDA003EA947 /* Fateh Club-Bridging-Header.h */,
 			);
-			name = Networking;
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		A2EC8A441B5A1A7500ED23E3 /* UI */ = {
@@ -156,16 +152,17 @@
 		A2FB5E9A1B59615F0085424A /* Fateh Club */ = {
 			isa = PBXGroup;
 			children = (
-				A2EC8A441B5A1A7500ED23E3 /* UI */,
 				A2FB5E9D1B59615F0085424A /* AppDelegate.swift */,
 				A2DB8DDD1B5A2140001773E1 /* NewsViewController.swift */,
+				A2A0FA891B5B3B2B00B357D7 /* PostViewController.swift */,
 				A2DB8DD91B5A210B001773E1 /* MatchesViewController.swift */,
 				A2DB8DDB1B5A2134001773E1 /* LeagueTableViewController.swift */,
 				A2FB5EA11B59615F0085424A /* Main.storyboard */,
 				A2FB5EA41B59615F0085424A /* Images.xcassets */,
 				A2FB5EA61B59615F0085424A /* LaunchScreen.xib */,
 				A2FB5E9B1B59615F0085424A /* Supporting Files */,
-				A2EC8A431B5A1A5E00ED23E3 /* Networking */,
+				A2EC8A441B5A1A7500ED23E3 /* UI */,
+				A2EC8A431B5A1A5E00ED23E3 /* Helpers */,
 			);
 			path = "Fateh Club";
 			sourceTree = "<group>";
@@ -360,12 +357,11 @@
 			files = (
 				A2DB8DDA1B5A210B001773E1 /* MatchesViewController.swift in Sources */,
 				A2FB5E9E1B59615F0085424A /* AppDelegate.swift in Sources */,
-				A2A31BD61B5ADEDA003EA947 /* Objective-CBridgingHeader.m in Sources */,
+				A2A0FA8A1B5B3B2B00B357D7 /* PostViewController.swift in Sources */,
 				A26E37801B5AE195004D9A3D /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A2EC8A461B5A1A9B00ED23E3 /* NewsTableCell.swift in Sources */,
 				A21D44B51B596486003B642B /* Constants.swift in Sources */,
 				A2A31BCC1B5AB4E9003EA947 /* MatchTableCell.swift in Sources */,
-				A2C953FC1B597229002FF0C1 /* APICommunicator.swift in Sources */,
 				A26E37811B5AE195004D9A3D /* UIScrollView+SVPullToRefresh.m in Sources */,
 				A2DB8DDC1B5A2134001773E1 /* LeagueTableViewController.swift in Sources */,
 				A2A31BCF1B5AB50E003EA947 /* LeagueTableCell.swift in Sources */,

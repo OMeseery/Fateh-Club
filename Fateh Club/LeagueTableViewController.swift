@@ -19,10 +19,7 @@ class LeagueTableViewController: UIViewController {
        
         self.teamsTable.dataSource = self;
         self.teamsTable.delegate = self;
-        
-       
-      
-         self.teamsTable.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.teamsTable.separatorStyle = UITableViewCellSeparatorStyle.None
         let nib = UINib(nibName: "LeagueTableCell", bundle: NSBundle.mainBundle())
         self.teamsTable.registerNib(nib, forCellReuseIdentifier: "cell")
         self.loadTable()
@@ -34,24 +31,6 @@ class LeagueTableViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-  override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        if teamsTable.tableHeaderView != nil {
-            let header = NSBundle.mainBundle().loadNibNamed("LeagueTableHeader", owner: self, options: nil)[0]  as! UIView
-           
-            header.setNeedsUpdateConstraints()
-            header.updateConstraintsIfNeeded()
-            header.frame = CGRectMake(0, 0, CGRectGetWidth(teamsTable.bounds), CGFloat.max)
-            var newFrame = header.frame
-            header.setNeedsLayout()
-            header.layoutIfNeeded()
-            let newSize = header.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize)
-            newFrame.size.height = newSize.height
-            header.backgroundColor = UIColor.blueColor()
-            header.frame = newFrame
-            self.teamsTable.tableHeaderView = header
-        }
-    }
 
 }
 

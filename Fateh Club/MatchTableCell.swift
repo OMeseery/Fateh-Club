@@ -12,7 +12,8 @@ class MatchTableCell: UITableViewCell {
 
     @IBOutlet weak var _MatchDate: UILabel!
     @IBOutlet weak var _MatchTime: UILabel!
-    @IBOutlet weak var _MatchResult: UILabel!
+    @IBOutlet weak var _MatchTeamAResult: UILabel!
+    @IBOutlet weak var _MatchTeamBResult: UILabel!
     @IBOutlet weak var _MatchTeamALogo: UIImageView!
     @IBOutlet weak var _MatchTeamBLogo: UIImageView!
     @IBOutlet weak var _MatchTeamAName: UILabel!

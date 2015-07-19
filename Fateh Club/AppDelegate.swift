@@ -17,16 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-       
+    
         
         UINavigationBar.appearance().translucent = false
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 22/255.0, green:160/255.0, blue:133/255.0, alpha: 1.0)
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        if let root = self.window?.rootViewController as? UINavigationController {
-            self.setupMenu(["أخبار","ترتيب الفرق","مباريات"],inView: root)
-
-        
-        }
+//        if let root = self.window?.rootViewController as? UINavigationController {
+//            self.setupMenu(["أخبار","ترتيب الفرق","مباريات"],inView: root)
+//
+//        
+//        }
         
         return true
     }
